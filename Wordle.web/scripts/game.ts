@@ -1,5 +1,5 @@
-import { Letter } from "./letter";
-import { LetterState, Word } from "./word";
+import { Letter, LetterState } from "./letter";
+import { Word } from "./word";
 
 export class Game {
   constructor(word: string) {

@@ -10,12 +10,8 @@ export class Word {
 
   public letters: Letter[];
 
-}
+  public get word() {
+    return this.letters.map((letter) => letter.letter).join("");
+  }
 
-
-export enum LetterState {
-  Unknown = 0,
-  RightPlace = 1,
-  RightLetter = 2,
-  Wrong = 3,
 }

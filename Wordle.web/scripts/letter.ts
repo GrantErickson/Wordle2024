@@ -5,6 +5,19 @@ export class Letter {
 
   public letter: string;
   public state: LetterState = LetterState.Unknown;
+
+  public get color() {
+    switch (this.state) {
+      case LetterState.RightPlace:
+        return "green darken-1";
+      case LetterState.RightLetter:
+        return "yellow";
+      case LetterState.Wrong:
+        return "gray";
+      default:
+        return "white";
+    }
+  }
 }
 
 export enum LetterState {
