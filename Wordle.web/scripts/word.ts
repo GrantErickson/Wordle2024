@@ -2,16 +2,15 @@ import { Letter } from "./letter";
 
 export class Word {
   constructor(word: string) {
-    this.letters = [];
-    for (let letter of word) {
-      this.letters.push(new Letter(letter));
+    for (const char of word) {
+      this.letters.push(new Letter(char));
     }
   }
 
-  public letters: Letter[];
+  public letters: Letter[] = [];
 
-  public get word() {
-    return this.letters.map((letter) => letter.letter).join("");
+  public get text() {
+    const chars = this.letters.map((letter) => letter.char);
+    return chars.join("");
   }
-
 }

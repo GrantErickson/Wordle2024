@@ -21,7 +21,7 @@ export class Game {
     // Use the wordle rules to update the guess with the states of the letter
     // Check for exact matches
     for (let i = 0; i < this.word.letters.length; i++) {
-      if (this.word.letters[i].letter === guess.letters[i].letter) {
+      if (this.word.letters[i].char === guess.letters[i].char) {
         this.word.letters[i].state = LetterState.RightPlace;
         guess.letters[i].state = LetterState.RightPlace;
       }
@@ -33,7 +33,7 @@ export class Game {
         for (let j = 0; j < this.word.letters.length; j++) {
           if (
             this.word.letters[j].state === LetterState.Unknown &&
-            this.word.letters[j].letter === guess.letters[i].letter
+            this.word.letters[j].char === guess.letters[i].char
           ) {
             this.word.letters[j].state = LetterState.RightLetter;
             guess.letters[i].state = LetterState.RightLetter;
