@@ -19,8 +19,12 @@ let guess = ref("");
 
 function submitGuess() {
   console.log("submitting guess", guess.value);
-  game.guess(guess.value);
-  guess.value = "";
+  if (game.guessIsValid(guess.value)) {
+    game.guess(guess.value);
+    guess.value = "";
+  } else {
+    console.log("invalid guess");
+  }
 }
 
 function onEnter() {

@@ -1,5 +1,6 @@
 import { Letter, LetterState } from "./letter";
 import { Word } from "./word";
+import { WordList } from "./wordList";
 
 export class Game {
   constructor(word: string) {
@@ -8,6 +9,10 @@ export class Game {
 
   public word: Word;
   public guesses: Word[] = [];
+
+  public guessIsValid(guess: string): boolean {
+    return WordList.includes(guess);
+  }
 
   public guess(wordGuess: string): Word {
     let guess = new Word(wordGuess);
