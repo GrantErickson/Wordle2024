@@ -11,9 +11,12 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "nuxt": "^3.11.1",
+    "sass": "^1.72.0",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "vuetify": "^3.5.14"
   },
   "devDependencies": {
     "@nuxt/test-utils": "^3.12.0",
